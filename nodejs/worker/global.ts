@@ -1,0 +1,1 @@
+export const global = this as any;
