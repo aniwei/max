@@ -1,0 +1,1 @@
+export * as native_module from './native_module'

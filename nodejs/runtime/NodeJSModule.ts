@@ -12,8 +12,8 @@ export class NodeJSModule {
       if (status === 200 || status === 304) {
         response = req.responseText;
       }
-    
     });
+    req.send(null);
 
     return response
   }

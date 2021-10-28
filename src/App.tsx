@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   useEffect(() => {
-    const worker = new Worker(`./nodejs/worker/index.ts`, {
+    const worker = new Worker(`/nodejs/runtime/index.ts`, {
       type: 'module'
     });
   }, [])
