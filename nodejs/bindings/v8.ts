@@ -1,5 +1,7 @@
 export function cachedDataVersionTag () {}
 
-export default {
+export const kHeapSpaces = []
 
+export default {
+  kHeapSpaces
 }

@@ -1,6 +1,9 @@
+export function setConsoleExtensionInstaller () {}
 export function registerAsyncHook () {} 
-
+export function consoleCall () {}
 
 export default {
-  registerAsyncHook
+  consoleCall,
+  registerAsyncHook,
+  setConsoleExtensionInstaller
 }

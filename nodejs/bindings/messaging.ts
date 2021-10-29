@@ -1,6 +1,11 @@
+export function setDeserializerCreateObjectFunction () {}
+
 export class JSTransferable {}
+export class MessagePort {}
 
 
 export default {
-  JSTransferable
+  setDeserializerCreateObjectFunction,
+  JSTransferable,
+  MessagePort
 }

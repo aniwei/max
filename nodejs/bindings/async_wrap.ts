@@ -14,10 +14,18 @@ export const constants = {
   kUsesExecutionAsyncResource: 8
 }
 
+
+export const async_id_fields = {}
+export const async_hook_fields = {}
+
+export function setupHooks () {}
 export function setCallbackTrampoline () {}
 
 
 export default {
   constants,
+  async_id_fields,
+  async_hook_fields,
+  setupHooks,
   setCallbackTrampoline
 }

@@ -4,10 +4,13 @@ import { global } from './global';
 import { process } from './process';
 import { primordials } from './primordials';
 // @ts-ignore
-import { internal } from '../lib/internal/bootstrap/loaders';
+import { boot } from '../lib/internal/bootstrap/loaders';
+// @ts-ignore
+import { init } from '../lib/internal/bootstrap/node';
 // @ts-ignore
 import { execute } from '../lib/internal/main/run_main_module';
 
+import * as Buffer from './buffer'
 
 class Environment {
   public global = global;
@@ -19,12 +22,17 @@ class Environment {
   public internalBinding;
   public require
 
+  public bindings = {
+    Buffer,
+    TextDecoder: global.TextDecoder
+  }
+
   boot () {
     const {
       NativeModule,
       internalBinding,
       require
-    } = internal(
+    } = boot(
       this.process,
       this.getLinkedBinding,
       this.getInternalBinding,
@@ -34,23 +42,30 @@ class Environment {
     this.require = require;
     this.NativeModule = NativeModule;
     this.internalBinding = internalBinding;
-  }
 
-  run () {
-    this.boot();
-    this.execute();
-  }
+    init(
+      this.process,
+      this.require,
+      this.internalBinding,
+      this.primordials,
+      function markBootstrapComplete () {
+        // debugger;
+      }
+    )
 
-  execute () {
     execute(
       this.process,
       this.require,
       this.internalBinding,
       this.primordials,
       function markBootstrapComplete () {
-        debugger;
+        // debugger;
       }
     )
+  }
+
+  run () {
+    this.boot();
   }
 }
 

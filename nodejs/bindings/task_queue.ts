@@ -14,6 +14,21 @@ export const constants = {
   kUsesExecutionAsyncResource: 8
 }
 
+export const promiseRejectEvents = {
+  kPromiseRejectWithNoHandler: 0,
+  kPromiseHandlerAddedAfterReject: 1,
+  kPromiseRejectAfterResolved: 2,
+  kPromiseResolveAfterResolved: 3
+
+}
+
+export function setTickCallback () {}
+export function setPromiseRejectCallback () {}
+
+
 export default {
-  constants
+  constants,
+  promiseRejectEvents,
+  setTickCallback,
+  setPromiseRejectCallback
 }

@@ -61,7 +61,7 @@ class Process {
   public arch = 'x64'
   public env = {}
 
-  public argv = []
+  public argv = ['', 'src/App.tsx']
 
   public release = {
     name: 'node',
@@ -89,6 +89,10 @@ class Process {
     unicode: '13.0',
     max: '1.0.0',
   };
+
+  cwd () {
+    return '/root/project'
+  }
 }
 
 export const process: IProcess = new Process() as any;

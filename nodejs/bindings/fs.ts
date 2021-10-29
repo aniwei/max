@@ -9,19 +9,45 @@ BrowserFS.configure({
   
 })
 
-export function openSync () {
-  debugger;
+export function internalModuleStat () {
+  return 0
 }
 
-export function stat () {
-  debugger;
+export function internalModuleReadJSON () {
+  return {}
+}
+
+export function open () {
+  return 10
+}
+
+export function read () {
+  return Buffer.from(`alert(1)`)
+}
+
+export function close () {
+  return 10
+}
+
+export function lstat () {
+  return {}
+}
+
+
+export function fstat () {
+  return {}
 }
 
 export function FSReqCallback () {}
 
 
 export default {
-  openSync,
-  stat,
-  FSReqCallback
+  lstat,
+  fstat,
+  open,
+  read,
+  close,
+  FSReqCallback,
+  internalModuleStat,
+  internalModuleReadJSON
 }

@@ -116,7 +116,7 @@ options.set('--experimental-wasm-modules', {
 })
 
 options.set('--experimental-loader', { 
-  value: [], 
+  value: null, 
   type: 5, 
   params: 1, 
   helpText: 'use the specified module as a custom loader'   

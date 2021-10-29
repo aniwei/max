@@ -15,7 +15,10 @@ export function NodeJSRuntimePlugin () {
     async load (id) {
       if (id.includes('nodejs/lib/internal/bootstrap/loaders')) {
         const source = await fs.readFile(id);
-        return `export function internal (process, getLinkedBinding, getInternalBinding, primordials) { ${source} } \x0a//#\x20sourceURL=files://${id}`
+        return `export function boot (process, getLinkedBinding, getInternalBinding, primordials) { ${source} } \x0a//#\x20sourceURL=files://${id}`
+      } else if (id.includes('nodejs/lib/internal/bootstrap/node')) {
+        const source = await fs.readFile(id);
+        return `export function init (process, require, internalBinding, primordials, markBootstrapComplete) { ${source} } \x0a//#\x20sourceURL=files://${id}`
       } else if (id.includes('nodejs/lib/internal/main/run_main_module')) {
         const source = await fs.readFile(id);
         return `export function execute (process, require, internalBinding, primordials, markBootstrapComplete) { ${source} } \x0a//#\x20sourceURL=files://${id}`
