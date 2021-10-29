@@ -1,10 +1,27 @@
+const aliases = new Map();
+
+aliases.set('-v', ['--version'])
+aliases.set('-h', ['--help'])
+aliases.set('-p', ['--print'])
+aliases.set('-e', ['--eval'])
+aliases.set('-r', ['--require'])
+aliases.set('-i', ['--interactive'])
+aliases.set('-i', ['--interactive'])
+aliases.set('--es-module-specifier-resolution', ['--es-module-specifier-resolution'])
+aliases.set('--loader', ['--experimental-loader'])
+
+const options = new Map();
+
 export const envSettings = {
   kAllowedInEnvironment: 0,
   kDisallowedInEnvironment: 1
 }
 
 export function getOptions () {
-  debugger;
+  return {
+    aliases,
+    options
+  }
 }
 
 export const types = {

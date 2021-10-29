@@ -1,9 +1,9 @@
-import BrowserFS, { EmscriptenFS } from 'browserfs';
+import * as BrowserFS from 'browserfs';
 import { global } from '../runtime/global';
 
-BrowserFS.initialize(global);
+BrowserFS.install(global);
 BrowserFS.configure({
-  fs: 'LocalStorage',
+  fs: 'Emscripten',
   options: {}
 }, () => {
   debugger;
@@ -16,3 +16,5 @@ export function openSync () {
 export function stat () {
   debugger;
 }
+
+export function FSReqCallback () {}

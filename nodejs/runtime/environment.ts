@@ -2,9 +2,11 @@ import { getInternalBinding } from './getInternalBinding';
 import { getLinkedBinding } from './getLinkedBinding';
 import { global } from './global';
 import { process } from './process';
+import { primordials } from './primordials';
+// @ts-ignore
 import { internal } from '../lib/internal/bootstrap/loaders';
+// @ts-ignore
 import { execute } from '../lib/internal/main/run_main_module';
-import * as primordials from './primordials';
 
 
 class Environment {

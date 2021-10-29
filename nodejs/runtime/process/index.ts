@@ -61,6 +61,8 @@ class Process {
   public arch = 'x64'
   public env = {}
 
+  public argv = []
+
   public release = {
     name: 'node',
     lts: 'Fermium',
