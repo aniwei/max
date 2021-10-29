@@ -78,3 +78,7 @@ export const UV_ETIMEDOUT = 110
 export const UV_ETXTBSY = 26
 export const UV_EXDEV = 18
 export const UV_UNKNOWN = 4094
+
+export default {
+  UV_E2BIG
+}

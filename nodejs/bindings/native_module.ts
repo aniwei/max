@@ -34,6 +34,7 @@ export const moduleIds = [
   'http2',
   'https',
   'inspector',
+  'internal/abort_controller',
   'internal/assert',
   'internal/assert/assertion_error',
   'internal/assert/calltracker',
@@ -141,6 +142,7 @@ export const moduleIds = [
   'internal/modules/esm/create_dynamic_module',
   'internal/modules/esm/get_format',
   'internal/modules/esm/get_source',
+  'internal/modules/esm/load',
   'internal/modules/esm/loader',
   'internal/modules/esm/module_job',
   'internal/modules/esm/module_map',
@@ -186,7 +188,9 @@ export const moduleIds = [
   'internal/source_map/source_map',
   'internal/source_map/source_map_cache',
   'internal/stream_base_commons',
+  'internal/streams/add-abort-signal',
   'internal/streams/buffer_list',
+  'internal/streams/compose',
   'internal/streams/destroy',
   'internal/streams/duplex',
   'internal/streams/duplexpair',
@@ -200,6 +204,7 @@ export const moduleIds = [
   'internal/streams/state',
   'internal/streams/transform',
   'internal/streams/writable',
+  'internal/streams/utils',
   'internal/test/binding',
   'internal/timers',
   'internal/tls',
@@ -211,12 +216,15 @@ export const moduleIds = [
   'internal/util/debuglog',
   'internal/util/inspect',
   'internal/util/inspector',
+  'internal/util/iterable_weak_map',
   'internal/util/types',
   'internal/v8_prof_polyfill',
   'internal/v8_prof_processor',
   'internal/validators',
   'internal/vm/module',
   'internal/watchdog',
+  'internal/webstreams/adapters',
+  'internal/webstreams/readablestream',
   'internal/worker',
   'internal/worker/io',
   'internal/worker/js_transferable',
@@ -231,6 +239,7 @@ export const moduleIds = [
   'readline',
   'repl',
   'stream',
+  'stream/promises',
   'string_decoder',
   'sys',
   'timers',
@@ -285,4 +294,10 @@ export class NativeModule {
 export function compileFunction (id) {
   
   return NativeModule.native.lookup(id);
+}
+
+export default {
+  config,
+  moduleIds,
+  compileFunction,
 }

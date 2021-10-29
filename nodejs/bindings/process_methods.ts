@@ -5,3 +5,8 @@ export function getFastAPIs () {
     hrtime: {}
   }
 }
+
+export default {
+  getFastAPIs,
+  patchProcessObject,
+}

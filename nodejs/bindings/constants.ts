@@ -202,3 +202,8 @@ export const os = {
     EXDEV: 18,
   }
 }
+
+export default {
+  fs,
+  os
+}

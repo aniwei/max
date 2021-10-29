@@ -8,3 +8,17 @@ export const hasOpenSSL = true
 export const hasTracing = true
 export const isDebugBuild = false
 export const noBrowserGlobals = false
+
+
+export default {
+  bits,
+  hasCachedBuiltins,
+  hasDtrace,
+  hasInspector,
+  hasIntl,
+  hasNodeOptions,
+  hasOpenSSL,
+  hasTracing,
+  isDebugBuild,
+  noBrowserGlobals
+}

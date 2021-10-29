@@ -12,3 +12,13 @@ export function setupObservers () {}
 export function getTimeOriginTimestamp () {}
 
 export class Histogram {}
+
+
+export default {
+  milestones,
+  constants,
+  getTimeOrigin,
+  setupObservers,
+  getTimeOriginTimestamp,
+  Histogram
+}

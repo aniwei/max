@@ -9,5 +9,16 @@ export class ShutdownWrap {
 }
 
 export class WriteWrap {
-  
+
+}
+
+
+export default {
+  kArrayBufferOffset,
+  kBytesWritten,
+  kLastWriteWasAsync,
+  kReadBytesOrError,
+  streamBaseState,
+  ShutdownWrap,
+  WriteWrap
 }

@@ -13,3 +13,7 @@ export const constants = {
   kTriggerAsyncId: 1,
   kUsesExecutionAsyncResource: 8
 }
+
+export default {
+  constants
+}

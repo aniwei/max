@@ -15,3 +15,9 @@ export const constants = {
 }
 
 export function setCallbackTrampoline () {}
+
+
+export default {
+  constants,
+  setCallbackTrampoline
+}

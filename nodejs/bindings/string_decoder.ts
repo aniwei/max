@@ -7,3 +7,9 @@ export const encodings = [
   'hex',
   'buffer'
 ]
+
+
+
+export default {
+  encodings
+}

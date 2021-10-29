@@ -6,7 +6,7 @@ BrowserFS.configure({
   fs: 'Emscripten',
   options: {}
 }, () => {
-  debugger;
+  
 })
 
 export function openSync () {
@@ -18,3 +18,10 @@ export function stat () {
 }
 
 export function FSReqCallback () {}
+
+
+export default {
+  openSync,
+  stat,
+  FSReqCallback
+}

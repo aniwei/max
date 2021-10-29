@@ -39,5 +39,11 @@ export function setURLConstructor () {
 }
 
 export function toUSVString () {
-  
+
+}
+
+
+export default {
+  toUSVString,
+  setURLConstructor,
 }

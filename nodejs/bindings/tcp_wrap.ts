@@ -11,5 +11,11 @@ export class TCP {
 }
 
 export class TCPConnectWrap {
-  
+
+}
+
+export default {
+  constants,
+  TCP,
+  TCPConnectWrap
 }
