@@ -54,14 +54,12 @@ export interface IProcess {
   reallyExit: (code: number | null, options?: ExitOptions) => never;
 }
 
-class Process {
+export class Process {
   public version: string = 'v14.16.0'
   public execPath = '/usr/local/bin/node'
   public platform = 'linux'
   public arch = 'x64'
   public env = {}
-
-  public argv = ['', 'src/App.tsx']
 
   public release = {
     name: 'node',
@@ -91,8 +89,6 @@ class Process {
   };
 
   cwd () {
-    return '/root/project'
+    return '/'
   }
 }
-
-export const process: IProcess = new Process() as any;

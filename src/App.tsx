@@ -6,6 +6,13 @@ function App() {
     const worker = new Worker(`/nodejs/runtime/index.ts`, {
       type: 'module'
     });
+
+    worker.addEventListener(`message`, () => {
+      debugger;
+      worker.postMessage({
+
+      })
+    })
   }, [])
 
   return (

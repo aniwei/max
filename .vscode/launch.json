@@ -10,7 +10,18 @@
       "name": "Launch Program",
       "skipFiles": [
       ],
-      "program": "${workspaceFolder}/example/test.js",
+      "program": "${workspaceFolder}/scripts/build-internal-modules.js",
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
+    }, 
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Test Node",
+      "skipFiles": [
+      ],
+      "program": "${workspaceFolder}/example/server.js",
       "outFiles": [
         "${workspaceFolder}/**/*.js"
       ]

@@ -1,3 +1,8 @@
-import { environment } from './environment';
+import { NodeJS } from './Node';
 
-environment.run();
+const nodejs = new NodeJS();
+
+nodejs
+  .init()
+  .boot()
+  .run(`server.js`)
